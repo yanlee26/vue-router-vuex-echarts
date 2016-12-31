@@ -1,0 +1,122 @@
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s
+}
+.fade-enter, .fade-leave-active {
+  opacity: 0
+}
+.slide-fade-enter-active {
+  transition: all .3s ease;
+}
+.slide-fade-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-active {
+  transform: translateX(10px);
+  opacity: 0;
+}
+.bounce-enter-active {
+  animation: bounce-in .5s;
+}
+.bounce-leave-active {
+  animation: bounce-out .5s;
+}
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes bounce-out {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+.app{
+  .btn{
+    position: fixed;
+    top: 1rem;
+    left: 1.5rem;
+    z-index: 10;
+    width: 60px;
+    height: 40px;
+    line-height: 50px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 18px;
+    line-height:2;
+    text-align:center;
+    background: $vue-green-light;
+    box-shadow: 0 0 8px #FB90B7;
+  }
+  .menu{
+    position: fixed;
+    top: 9rem;
+    left: 9rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: all .7s ease-in;
+  }
+  &.move-enter-active{
+    .inner{
+      transform: translate3d(0, 0, 0);
+      transition-timing-function: cubic-bezier(0, .57, .44, 1.97);}
+    .inner-1{
+      transition-delay: .1s;}
+    .inner-2{
+      transition-delay: .2s;}
+    .inner-3{
+      transition-delay: .3s;}
+  }
+  &.move-enter, &.move-leave-active{
+    .inner{
+      transition-timing-function: ease-in-out;}
+    .inner-1{
+      transform: translate3d(0, 60px, 0);
+      transition-delay: .3s;}
+    .inner-2{
+      transform: translate3d(40px, 40px, 0);
+      transition-delay: .2s;}
+    .inner-3{
+      transform: translate3d(60px, 0, 0);
+      transition-delay: .1s;}
+  }
+  .inner{
+    display: inline-block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    background: red;
+    text-align: center;
+    color: #fff;
+    transition: all .4s;
+  }
+  .inner-1{
+    top: -7.0rem;
+    left: 1rem;
+  }
+  .inner-2{
+    left: 0rem;
+    top: -3rem;
+  }
+  .inner-3{
+    left: -3rem;
+    top: 0rem;
+  }
+}

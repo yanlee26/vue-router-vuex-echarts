@@ -1,0 +1,16 @@
+@import "prefix";
+
+.main{
+	@include display(flex);
+	justify-content: space-between;
+	flex-direction:column;
+	.vue-echarts {
+		margin:.5rem auto;
+		width: 60rem;
+		height: 40rem;
+		border: solid #D01257 1px;
+		box-shadow: 0 0 8px #FB90B7;
+		border-radius: 1rem;
+	}   
+}
+

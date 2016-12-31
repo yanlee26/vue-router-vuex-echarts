@@ -1,0 +1,49 @@
+#app{
+  margin:0 auto;
+  h1{
+    margin-top:0rem;
+    text-align:center;
+    color:#fff;
+  }
+  header{
+    background: $dark-grey;
+    height: 120px;
+    nav{
+      ul{
+        @include display(flex);
+        justify-content: space-between;
+        li{
+          display:inline-block;
+          list-style:none;
+          background:#ccc;
+          margin:0 auto;
+          width:5rem;
+          text-align:center;
+          font-size:1.2rem;
+          line-height:2.0rem;
+          border-radius:0.2rem;
+        }
+      }
+    }
+  }
+  aside{
+    float:left;
+    width:200px;
+    margin: .5rem 2rem;
+    
+  }
+  article{
+    .main{
+      border-left:1px dotted $body-color-light;
+    }
+  }
+  footer{
+  position:fixed;
+  bottom:0;
+  height:50px;
+  width:100%;
+  text-aligh:center;
+  line-height:50px;
+  background:$vue-darker;
+  }
+}
