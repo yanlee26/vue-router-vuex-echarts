@@ -24,30 +24,31 @@
 
 #### 目录简介
 ```
-├── build--编译任务的代码
-│   ├── build.js
+├── build--脚本目录
+│   ├── build.js---生产环境构建脚本
 │   ├── check-versions.js
-│   ├── dev-client.js
-│   ├── dev-server.js---
-│   ├── utils.js
-│   ├── webpack.base.conf.js
-│   ├── webpack.dev.conf.js
-│   └── webpack.prod.conf.js
-├── config--webpack的配置文件
-│   ├── dev.env.js
-│   ├── index.js
-│   └── prod.env.js
+│   ├── dev-client.js---开发服务器热重载
+│   ├── dev-server.js---运行本地开发服务器
+│   ├── utils.js---构建相关工具方法
+│   ├── webpack.base.conf.js---webpack基础配置
+│   ├── webpack.dev.conf.js---webpack开发环境配置
+│   └── webpack.prod.conf.js---webpack生产环境配置
+├── config--项目配置
+│   ├── dev.env.js---开发环境变量
+│   ├── index.js---项目配置文件
+│   ├── prod.env.js---生产环境变量
+│   └── test.env.js---测试环境变量
 ├── dist--打包压缩后生成的文件
-|	├── css
-|	├── fonts
-|	├── img
-|	├── js
-│   └── index.html
+│	├── css
+│	├── fonts
+│	├── img
+│	├── js
+│ └── index.html
 ├── fonts--字体图标文件
 ├── node_modules--项目中可能用到的所有的包
 ├── src
 │   ├── assets
-|	│   ├── scss文件
+│	  │   ├── scss文件
 │   │   └── images
 │   ├── components--一级导航vue文件
 │   │   
@@ -55,14 +56,21 @@
 │   │  
 │   ├── packages--二级导航vue文件
 │   │  
-│   ├── App.vue
-│   └── main.js
+│   ├── App.vue---根组件
+│   └── main.js---入口js文件
+├── static纯静态资源，不会被webpack构建
+├── test 测试文件目录（unit&e2e）
+│   └── unit   单元测试
+│          ├── index.js    入口脚本
+│          ├── karma.conf.js   karma配置文件
+│          └── specs   单测case目录
+│               └── Hello.spec.js
 ├── .babelrc--babel配置项
 ├── .editorconfig--编辑信息配置
 ├── .gitignore--git配置项
 ├── index.html--入口页面
 ├── package.json--npm包配置信息
-├── README.md
+└── README.md---项目介绍
 ```
 
 #### 开发环境
