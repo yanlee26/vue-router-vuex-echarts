@@ -52,7 +52,7 @@
 │   │   └── images
 │   ├── components--一级导航vue文件
 │   │   
-│   ├── js---echarts数据，router及store配置
+│   ├── js---echarts数据，router及store,fetch或ajax配置
 │   │  
 │   ├── packages--二级导航vue文件
 │   │  

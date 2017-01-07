@@ -2,6 +2,9 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 Vue.use(Vuex)
 import echarts_data from './Echarts_data'
+// import fetch from '../config/fetch'
+// echarts_data=()=>fetch('GET', '/xx/xx', {type: 'xx'})
+
 
 const state={
 	m1:echarts_data.M.m1,

@@ -1,5 +1,5 @@
 <template>
-  <div class="main">{{a}}
+  <div class="main">
     <div v-for="i in option.length" :class="['vue-echarts','a'+i]"></div>
   </div>
 </template>
