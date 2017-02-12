@@ -1,18 +1,24 @@
 <template>
-  <div class="main">
-    <div v-for="i in option.length" :class="['vue-echarts','a'+i]"></div>
+  <div>
+    <echarts-component :option='option'></echarts-component>
   </div>
 </template>
 <script>
 import echarts from 'echarts'
+import echartsComponent from '../components/Echarts'
+
 export default {
     name:'m2',
     data() {
         var option=[];
         return {
+          msg1:'hello',
             chart: null,
             option:this.$store.state.m2,
         }
+    },
+    components:{
+      echartsComponent
     },
     methods:{
       eRender(){
@@ -22,16 +28,10 @@ export default {
         }
       }
     },
-    created() {
+    mounted() {
         this.$nextTick(
             this.eRender
       )
     }
 }
 </script>
-
-<style lang="scss" >
-
-@import "../assets/charts";
-
-</style>

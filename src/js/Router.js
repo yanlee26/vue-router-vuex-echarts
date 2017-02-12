@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 Vue.use(VueRouter)
-// Vue.component('chart', VueECharts);
+	// Vue.component('chart', VueECharts);
 
 import main from '../components/Main';
 import equip from '../components/Equip';
@@ -35,54 +35,102 @@ import f4 from '../packages/f4';
 import f5 from '../packages/f5';
 import f6 from '../packages/f6';
 import f7 from '../packages/f7';
-import f8 from '../packages/f8';
-import f9 from '../packages/f9';
 
-const router=new VueRouter({
-	mode:'history',
-	base:__dirname,
-	routes:[
-		{path:'/',name:'home',component:main},
-		{path:'/service',name:'service',component:service},
-		{path:'/equip',component:equip,
-			children:[
-				{path:'',component:e0},
-				{path:'e1',component:e1},
-				{path:'e2',component:e2}
-			]
-		},
-		{path:'/science',component:science,
-			children:[
-				{path:'',component:sc0},
-				{path:'sc1',component:sc1},
-				{path:'sc2',component:sc2},
-			]
-		},
-		{path:'/medicine',component:medicine,
-			children:[
-				{path:'',component:m0},
-				{path:'m1',component:m1},
-				{path:'m2',component:m2},
-				{path:'m3',component:m3},
-				{path:'m4',component:m4},
-				{path:'m5',component:m5},
-				{path:'m6',component:m6}
-			]
-		},
-		{path:'/finance',component:finance,
-			children:[
-				{path:'',component:f0},
-				{path:'f1',component:f1},
-				{path:'f2',component:f2},
-				{path:'f3',component:f3},
-				{path:'f4',component:f4},
-				{path:'f5',component:f5},
-				{path:'f6',component:f6},
-				{path:'f7',component:f7}
-				]
-		},
-		{path:'/outpatient',name:'outpatient',component:outpatient}
-	]
+const router = new VueRouter({
+	mode: 'history',
+	base: __dirname,
+	routes: [{
+		path: '/',
+		name: 'home',
+		component: main
+	}, {
+		path: '/service',
+		name: 'service',
+		component: service
+	}, {
+		path: '/equip',
+		component: equip,
+		children: [{
+			path: '',
+			component: e0
+		}, {
+			path: 'e1',
+			component: e1
+		}, {
+			path: 'e2',
+			component: e2
+		}]
+	}, {
+		path: '/science',
+		component: science,
+		children: [{
+			path: '',
+			component: sc0
+		}, {
+			path: 'sc1',
+			component: sc1
+		}, {
+			path: 'sc2',
+			component: sc2
+		}, ]
+	}, {
+		path: '/medicine',
+		component: medicine,
+		children: [{
+			path: '',
+			component: m0
+		}, {
+			path: 'm1',
+			component: m1
+		}, {
+			path: 'm2',
+			component: m2
+		}, {
+			path: 'm3',
+			component: m3
+		}, {
+			path: 'm4',
+			component: m4
+		}, {
+			path: 'm5',
+			component: m5
+		}, {
+			path: 'm6',
+			component: m6
+		}]
+	}, {
+		path: '/finance',
+		component: finance,
+		children: [{
+			path: '',
+			component: f0
+		}, {
+			path: 'f1',
+			component: f1
+		}, {
+			path: 'f2',
+			component: f2
+		}, {
+			path: 'f3',
+			component: f3
+		}, {
+			path: 'f4',
+			component: f4
+		}, {
+			path: 'f5',
+			component: f5
+		}, {
+			path: 'f6',
+			component: f6
+		}, {
+			path: 'f7',
+			component: f7
+		}]
+	}, {
+		path: '/outpatient',
+		name: 'outpatient',
+		component: outpatient
+	}]
 });
 
 export default router
